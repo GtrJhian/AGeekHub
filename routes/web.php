@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/sin/{x}/{n}/{d}','MaclaurinSeriesController@sin');
-Route::get('/cos/{x}/{n}/{d}','MaclaurinSeriesController@cos');
-Route::get('/ln_x_plus_1/{x}/{n}/{d}','MaclaurinSeriesController@ln_x_plus_1');
+Route::get('/Maclaurin/sin/{x}/{n}/{d}/{a?}','MaclaurinSeriesController@sin');
+Route::get('/Maclaurin/cos/{x}/{n}/{d}/{a?}','MaclaurinSeriesController@cos');
+Route::get('/Maclaurin/ln_x_plus_1/{x}/{n}/{d}/{a?}','MaclaurinSeriesController@ln_x_plus_1');
+Route::get('/desmos',function(){
+    return view('desmos');
+});
